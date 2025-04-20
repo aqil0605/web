@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kamu Sayang Aku Nggak?</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-image: url('./WhatsApp\ Image\ 2025-04-20\ at\ 03.05.35.jpeg'); /* Ganti dengan link gambar kamu */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding: 100px;
+      transition: background 1s;
+    }
+    h1 {
+      color:  #ff66cc;
+      font-size: 3em;
+    }
+    .btn {
+      font-size: 1.5em;
+      padding: 10px 30px;
+      margin: 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    #yesBtn {
+      background-color: green;
+      color: white;
+    }
+    #noBtn {
+      background-color: red;
+      color: #666;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kamu sayang aku nggak? </h1>
+  <button class="btn" id="yesBtn">YES!</button>
+  <button class="btn" id="noBtn">NO</button>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+
+    yesBtn.addEventListener('click', () => {
+      document.body.style.background = 'linear-gradient(to right, , WhatsApp Image 2025-04-20 at 03.21.09)';
+      document.body.innerHTML = `
+        <h1>Yayyy!! Aku juga sayang kamu 🤍🤍🤍</h1>
+        <p style="color: #ff66cc; text-shadow: 0 0 10px #ff99cc;">lopyu sayang, aku sayang kamu 🤍</p>
+        <div style="font-size: 3em;">🥰</div>
+      `;
+    });
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+  </script>
+</body>
+</html>
